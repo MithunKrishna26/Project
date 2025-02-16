@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Details</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; padding: 20px; background-color: #f4f4f4;">
+
+  <!-- Main Heading -->
+  <header style="text-align: center; margin-bottom: 30px;">
+    <h1 style="color: #333;">Patient Details</h1>
+    <p style="color: #666;">Manage Users, Patients, and Heart Rate Data</p>
+  </header>
+
+  <!-- User Registration -->
+  <section style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <h2 style="color: #333;">User Registration</h2>
+    <form action="/register" method="POST">
+      <label for="registerEmail" style="display: block; margin-bottom: 8px; color: #555;">Email:</label>
+      <input type="email" id="registerEmail" name="email" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <label for="registerPassword" style="display: block; margin-bottom: 8px; color: #555;">Password:</label>
+      <input type="password" id="registerPassword" name="password" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <button type="submit" style="background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Register</button>
+    </form>
+  </section>
+
+  <!-- User Login -->
+  <section style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <h2 style="color: #333;">User Login</h2>
+    <form action="/login" method="POST">
+      <label for="loginEmail" style="display: block; margin-bottom: 8px; color: #555;">Email:</label>
+      <input type="email" id="loginEmail" name="email" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <label for="loginPassword" style="display: block; margin-bottom: 8px; color: #555;">Password:</label>
+      <input type="password" id="loginPassword" name="password" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <button type="submit" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Login</button>
+    </form>
+  </section>
+
+  <!-- Add Patient -->
+  <section style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <h2 style="color: #333;">Add Patient</h2>
+    <form action="/patients" method="POST">
+      <label for="patientName" style="display: block; margin-bottom: 8px; color: #555;">Patient Name:</label>
+      <input type="text" id="patientName" name="name" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <label for="patientAge" style="display: block; margin-bottom: 8px; color: #555;">Patient Age:</label>
+      <input type="number" id="patientAge" name="age" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <label for="userId" style="display: block; margin-bottom: 8px; color: #555;">User ID:</label>
+      <input type="number" id="userId" name="user_id" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <button type="submit" style="background-color: #17a2b8; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Add Patient</button>
+    </form>
+  </section>
+
+  <!-- Get Patient Details -->
+  <section style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <h2 style="color: #333;">Get Patient Details</h2>
+    <form action="/patients" method="GET">
+      <label for="patientId" style="display: block; margin-bottom: 8px; color: #555;">Patient ID:</label>
+      <input type="number" id="patientId" name="patient_id" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <button type="submit" style="background-color: #ffc107; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Get Patient</button>
+    </form>
+  </section>
+
+  <!-- Record Heart Rate -->
+  <section style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <h2 style="color: #333;">Record Heart Rate</h2>
+    <form action="/heartrate" method="POST">
+      <label for="heartRatePatientId" style="display: block; margin-bottom: 8px; color: #555;">Patient ID:</label>
+      <input type="number" id="heartRatePatientId" name="patient_id" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <label for="heartRateValue" style="display: block; margin-bottom: 8px; color: #555;">Heart Rate:</label>
+      <input type="number" id="heartRateValue" name="heart_rate" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <button type="submit" style="background-color: #dc3545; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Record Heart Rate</button>
+    </form>
+  </section>
+
+  <!-- Get Heart Rate Data -->
+  <section style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+    <h2 style="color: #333;">Get Heart Rate Data</h2>
+    <form action="/heartrate" method="GET">
+      <label for="heartRatePatientIdFetch" style="display: block; margin-bottom: 8px; color: #555;">Patient ID:</label>
+      <input type="number" id="heartRatePatientIdFetch" name="patient_id" required style="width: 100%; padding: 8px; margin-bottom: 12px; border: 1px solid #ccc; border-radius: 4px;"><br>
+      <button type="submit" style="background-color: #6c757d; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Get Heart Rate Data</button>
+    </form>
+  </section>
+
+</body>
+</html>
