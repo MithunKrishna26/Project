@@ -1,0 +1,19 @@
+#Patient Monitoring System
+
+## Description
+This project consists of a **frontend built with HTML** and a **backend powered by Flask**.  
+It allows users to:
+- Register
+-Login
+-Add Patient and get patient details
+-record heart rate and display patient heart rate
+
+## How to Run the Project
+Follow these steps to run the project locally:
+
+1. Run the backend Flask application
+python app.py
+
+2. Open your web browser and search
+http://127.0.0.1:5000
+
